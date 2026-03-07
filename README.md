@@ -13,3 +13,9 @@ Goal:
 Become strong in JavaScript fundamentals and build real projects.
 
 Started on: 27 Feb 2026
+
+## Progress
+
+- 01 Introduction
+- 02 Data Types
+- 03 Operators
