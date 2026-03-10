@@ -20,3 +20,4 @@ Started on: 27 Feb 2026
 - 02 Data Types
 - 03 Operators
 - 04 Conditionals
+- 05 Loops
