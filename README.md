@@ -21,3 +21,4 @@ Started on: 27 Feb 2026
 - 03 Operators
 - 04 Conditionals
 - 05 Loops
+- 06 Functions
