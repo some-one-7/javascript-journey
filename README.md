@@ -23,3 +23,4 @@ Started on: 27 Feb 2026
 - 05 Loops
 - 06 Functions
 - 07 Arrays
+- 08 Array Methods
