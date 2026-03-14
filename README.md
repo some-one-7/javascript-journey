@@ -24,3 +24,4 @@ Started on: 27 Feb 2026
 - 06 Functions
 - 07 Arrays
 - 08 Array Methods
+- 09 Objects
