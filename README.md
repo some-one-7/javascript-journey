@@ -25,3 +25,4 @@ Started on: 27 Feb 2026
 - 07 Arrays
 - 08 Array Methods
 - 09 Objects
+- 10 String Methods
