@@ -27,3 +27,4 @@ Started on: 27 Feb 2026
 - 09 Objects
 - 10 String Methods
 - 11 DOM Introduction
+- 12 TODO app
