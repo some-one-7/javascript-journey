@@ -9,3 +9,4 @@
 - HTML
 - JavaScript (DOM)
 
+=>This is raw version of todo.. styling and other features are on their way !
