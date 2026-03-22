@@ -29,3 +29,4 @@ Started on: 27 Feb 2026
 - 11 DOM Introduction
 - 12 TODO app
 - 13 Update TODO app
+- 14 Async JavaScript basics
