@@ -1,4 +1,4 @@
-# Day 15 - Async JavaScript Basics
+# Day 14 - Async JavaScript Basics
 
 ## What I Learned
 
