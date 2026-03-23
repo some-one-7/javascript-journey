@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object.create & Prototypes</title>
+</head>
+<body>
 
+  <h1>Open Console (F12)</h1>
+
+  <script>
+    console.log("=== Object.create() & Prototypes ===");
+
+    // 🔹 1. Base Object
+    const person = {
+      greet() {
+        console.log("Hello from person");
+      }
+    };
+
+    // 🔹 2. Create new object using Object.create
+    const user = Object.create(person);
+    user.name = "Rahul";
+
+    console.log("User Name:", user.name);
+    user.greet(); // inherited method
+
+    // 🔹 3. Prototype Check
+    console.log(user.__proto__ === person); // true
+
+    // 🔹 4. Prototype Chain Example
+    const animal = {
+      eats: true
+    };
+
+    const dog = Object.create(animal);
+    dog.barks = true;
+
+    console.log("Dog eats:", dog.eats); // from parent
+    console.log("Dog barks:", dog.barks);
+
+    // 🔹 5. Method Inheritance Example
+    const car = {
+      start() {
+        console.log("Car started");
+      }
+    };
+
+    const electricCar = Object.create(car);
+    electricCar.battery = "80%";
+
+    electricCar.start(); // inherited
+    console.log("Battery:", electricCar.battery);
+
+    // 🔹 6. Overriding Property
+    const human = {
+      type: "Mammal"
+    };
+
+    const student = Object.create(human);
+    student.type = "Student"; // override
+
+    console.log("Student type:", student.type); // own property
+    console.log("Human type:", human.type);
+
+    // 🔹 7. hasOwnProperty
+    console.log(student.hasOwnProperty("type")); // true
+    console.log(student.hasOwnProperty("toString")); // false
+
+    // 🔹 8. Prototype Chain Deep Check
+    console.log(student.__proto__ === human); // true
+    console.log(human.__proto__ === Object.prototype); // true
+
+  </script>
+
+</body>
+</html>
