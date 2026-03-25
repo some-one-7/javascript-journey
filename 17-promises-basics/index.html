@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promises Basics</title>
+</head>
+<body>
 
+  <h1>Open Console (F12)</h1>
+
+  <script>
+
+    console.log("=== Promise Basics ===");
+
+    // 🔹 1. Basic Promise
+    const myPromise = new Promise((resolve, reject) => {
+      let success = true;
+
+      setTimeout(() => {
+        if (success) {
+          resolve("Task Completed ✅");
+        } else {
+          reject("Task Failed ❌");
+        }
+      }, 2000);
+    });
+
+    myPromise
+      .then(result => console.log(result))
+      .catch(error => console.log(error));
+
+    // 🔹 2. Promise Chaining
+    function stepTask() {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve("Step 1 done"), 1000);
+      });
+    }
+
+    stepTask()
+      .then(res => {
+        console.log(res);
+        return "Step 2 done";
+      })
+      .then(res => {
+        console.log(res);
+        return "Step 3 done";
+      })
+      .then(res => console.log(res));
+
+    // 🔹 3. Fake Async Function
+    function asyncTask(success) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (success) {
+            resolve("Async success 🎉");
+          } else {
+            reject("Async error 🚫");
+          }
+        }, 1500);
+      });
+    }
+
+    asyncTask(true)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+
+  </script>
+
+</body>
+</html>
