@@ -32,3 +32,4 @@ Started on: 27 Feb 2026
 - 14 Async JavaScript basics
 - 15 Object.create() & Prototypes
 - 16 Constructor Functions & Classes
+- 17-promises-basics
