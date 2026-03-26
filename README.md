@@ -33,3 +33,4 @@ Started on: 27 Feb 2026
 - 15 Object.create() & Prototypes
 - 16 Constructor Functions & Classes
 - 17-promises-basics
+- 18-fetch-api-project
