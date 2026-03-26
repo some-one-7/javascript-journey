@@ -22,25 +22,19 @@ fetch(url)
 
 ---
 
-## 4. Example API
-
-https://api.github.com/users/{username}
-
----
-
-## 5. DOM Update
+## 4. DOM Update
 
 We use innerHTML to show data on screen
 
 ---
 
-## 6. Error Handling
+## 5. Error Handling
 
 .catch(error => console.log(error))
 
 ---
 
-## 7. Key Concepts
+## 6. Key Concepts
 
 - Fetch is async
 - Returns a Promise
