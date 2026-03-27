@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Async Await</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f4f4f4;
+    }
 
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GitHub User (Async/Await)</h1>
+
+  <input type="text" id="username" placeholder="Enter username">
+  <button onclick="getUser()">Search</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function getUser() {
+      const username = document.getElementById("username").value;
+
+      if (!username) {
+        alert("Enter username!");
+        return;
+      }
+
+      try {
+        const res = await fetch(`https://api.github.com/users/${username}`);
+        const data = await res.json();
+
+        document.getElementById("result").innerHTML = `
+          <div class="card">
+            <img src="${data.avatar_url}" width="100">
+            <h2>${data.name}</h2>
+            <p>${data.bio || "No bio"}</p>
+            <p>Followers: ${data.followers}</p>
+          </div>
+        `;
+      } catch (error) {
+        console.log("Error:", error);
+      }
+    }
+  </script>
+
+</body>
+</html>
