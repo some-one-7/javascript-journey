@@ -35,4 +35,5 @@ Started on: 27 Feb 2026
 - 17 promises-basics
 - 18-fetch-api-project
 - 19-async-await
-- 20-loading-error-handling 
+- 20-loading-error-handling
+- 21-Counter App
