@@ -38,3 +38,4 @@ Started on: 27 Feb 2026
 - 20-loading-error-handling
 - 21-Counter App
 - 22-password-generator
+- 23-color-generator
