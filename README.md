@@ -39,3 +39,4 @@ Started on: 27 Feb 2026
 - 21-Counter App
 - 22-password-generator
 - 23-color-generator
+- 24-digital-clock
