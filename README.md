@@ -40,3 +40,4 @@ Started on: 27 Feb 2026
 - 22-password-generator
 - 23-color-generator
 - 24-digital-clock
+- 25-quiz-app
