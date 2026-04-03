@@ -41,3 +41,4 @@ Started on: 27 Feb 2026
 - 23-color-generator
 - 24-digital-clock
 - 25-quiz-app
+- 26-Weather-app
