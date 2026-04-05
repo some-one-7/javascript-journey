@@ -43,3 +43,4 @@ Started on: 27 Feb 2026
 - 25-quiz-app
 - 26-Weather-app
 - 27-Advanced ToDo App
+- 28-Notes App
