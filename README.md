@@ -44,4 +44,5 @@ Started on: 27 Feb 2026
 - 26-Weather-app
 - 27-Advanced ToDo App
 - 28-Notes App
-- 29-Expense Tracker 
+- 29-Expense Tracker
+- 30–Expense Tracker (Advanced)
