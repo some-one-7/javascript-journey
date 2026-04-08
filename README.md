@@ -46,3 +46,4 @@ Started on: 27 Feb 2026
 - 28-Notes App
 - 29-Expense Tracker
 - 30–Expense Tracker (Advanced)
+- 31-Expense-Tracker-Search-Sort
