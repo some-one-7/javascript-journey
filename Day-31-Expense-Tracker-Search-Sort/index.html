@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+  <h1>Expense Tracker</h1>
+
+  <h2>Balance: ₹<span id="balance">0</span></h2>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search...">
+
+    <select id="sort">
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+      <option value="high">Amount High → Low</option>
+      <option value="low">Amount Low → High</option>
+    </select>
+  </div>
+
+  <ul id="list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
