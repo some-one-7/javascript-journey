@@ -47,3 +47,4 @@ Started on: 27 Feb 2026
 - 29-Expense Tracker
 - 30–Expense Tracker (Advanced)
 - 31-Expense-Tracker-Search-Sort
+- 32–Expense Tracker (Charts)
