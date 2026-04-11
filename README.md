@@ -48,3 +48,4 @@ Started on: 27 Feb 2026
 - 30–Expense Tracker (Advanced)
 - 31-Expense-Tracker-Search-Sort
 - 32–Expense Tracker (Charts)
+- 33–Modular JavaScript
