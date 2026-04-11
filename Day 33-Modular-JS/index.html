@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modular Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+  <h1>Expense Tracker</h1>
+
+  <form id="form">
+    <input type="text" id="text" placeholder="Description" required>
+    <input type="number" id="amount" placeholder="Amount" required>
+    <button>Add</button>
+  </form>
+
+  <ul id="list"></ul>
+</div>
+
+<!-- IMPORTANT: type="module" -->
+<script type="module" src="main.js"></script>
+</body>
+</html>
