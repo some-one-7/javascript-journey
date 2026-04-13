@@ -50,3 +50,4 @@ Started on: 27 Feb 2026
 - 32–Expense Tracker (Charts)
 - 33–Modular JavaScript
 - 34–API Based App
+- 35–GitHub User Search
