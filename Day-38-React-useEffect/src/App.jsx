@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 
 export default function App() {
   const [username, setUsername] = useState("octocat");
+  const [userData, setUserData] = useState(null);
 
   const fetchUser = async () => {
     const res = await fetch(`https://api.github.com/users/${username}`);
     const data = await res.json();
-    console.log(data);
+    setUserData(data); // ✅ store data
   };
 
-  // ✅ Auto fetch on page load
   useEffect(() => {
     fetchUser();
   }, []);
@@ -25,6 +25,14 @@ export default function App() {
       />
 
       <button onClick={fetchUser}>Search</button>
+
+      {/* ✅ Show data */}
+      {userData && (
+        <div>
+          <img src={userData.avatar_url} width="100" />
+          <h2>{userData.login}</h2>
+        </div>
+      )}
     </div>
   );
 }
