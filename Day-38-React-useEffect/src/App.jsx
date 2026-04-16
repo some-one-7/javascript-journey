@@ -3,34 +3,46 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [username, setUsername] = useState("octocat");
   const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const fetchUser = async () => {
-    const res = await fetch(`https://api.github.com/users/${username}`);
-    const data = await res.json();
-    setUserData(data); // ✅ store data
+  const fetchUser = async (user) => {
+    setLoading(true);
+    try {
+      const res = await fetch(`https://api.github.com/users/${user}`);
+      const data = await res.json();
+      setUserData(data);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
+  // 🔥 useEffect → runs on page load
   useEffect(() => {
-    fetchUser();
+    fetchUser(username);
   }, []);
 
   return (
-    <div>
-      <h1>GitHub Finder</h1>
+    <div className="container">
+      <h1>GitHub Auto Fetch</h1>
 
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
+      <div className="search-box">
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <button onClick={() => fetchUser(username)}>Search</button>
+      </div>
 
-      <button onClick={fetchUser}>Search</button>
+      {loading && <p>Loading...</p>}
 
-      {/* ✅ Show data */}
       {userData && (
-        <div>
-          <img src={userData.avatar_url} width="100" />
-          <h2>{userData.login}</h2>
+        <div className="card">
+          <img src={userData.avatar_url} />
+          <h2>{userData.name}</h2>
+          <p>@{userData.login}</p>
         </div>
       )}
     </div>
