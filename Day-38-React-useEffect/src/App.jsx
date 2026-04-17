@@ -7,7 +7,8 @@ export default function App() {
   const fetchUser = async () => {
     const res = await fetch(`https://api.github.com/users/${username}`);
     const data = await res.json();
-    setUserData(data);
+
+    setUserData(data); // ✅ store data
   };
 
   useEffect(() => {
@@ -19,11 +20,13 @@ export default function App() {
       <h1>GitHub Finder</h1>
 
       <input
+        type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
 
       <button onClick={fetchUser}>Search</button>
+
 
       {userData && (
         <div>
