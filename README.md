@@ -56,3 +56,5 @@ Started on: 27 Feb 2026
 - 38-React-useEffect
 - 39-React-Live-Search
 - 40-Debounce-Search
+- 41-Loading-Error
+- 42-useDebounce
