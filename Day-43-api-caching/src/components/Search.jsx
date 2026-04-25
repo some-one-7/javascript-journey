@@ -23,11 +23,14 @@ const Search = () => {
       <button onClick={handleSearch}>Search</button>
 
       {loading && <p>Loading...</p>}
-
+{!loading && data.length === 0 && query && (
+  <p>No results found</p>
+)}
       <ul>
-        {data.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
+       
+  {data.map((user) => (
+    <li key={user.id}>{user.login}</li>
+  ))}
       </ul>
     </div>
   );
