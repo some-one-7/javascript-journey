@@ -21,15 +21,15 @@ export const useCachedFetch = () => {
       setLoading(true);
       console.log("API Call");
 
-      const res = await fetch(
-        `https://jsonplaceholder.typicode.com/posts?q=${query}`
-      );
-      const result = await res.json();
+    const res = await fetch(
+  `https://api.github.com/search/users?q=${query}`
+);
+const result = await res.json();
 
-      // store in cache
-      cache[query] = result;
+// IMPORTANT: store only items
+cache[query] = result.items || [];
 
-      setData(result);
+setData(result.items || []);
     } catch (err) {
       console.error(err);
     } finally {
