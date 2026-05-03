@@ -60,3 +60,4 @@ Started on: 27 Feb 2026
 - 42-useDebounce
 - 43-api-caching
 - 44-useReducer
+- 45-context-api
