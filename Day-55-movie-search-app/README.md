@@ -5,6 +5,7 @@
 - API integration
 - Dynamic movie pages
 
+-
 ## Learnings
 - fetch API
 - useEffect
